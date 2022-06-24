@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/crm-thymeleaf?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123
+  thymeleaf:
+    encoding: UTF-8
+    mode: HTML
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+server:
+  port: 9091
+  servlet:
+    context-path: /crm
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+mybatis:
+  mapper-locations: classpath:com/gb/crm/*/mapper/*.xml
+  configuration: #日志信息
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+资质审查: 10
+需求分析: 20
+价值建议: 30
+确定决策者: 50
+提案/报价: 70
+谈判/复审: 90
+成交: 100
+丢失的线索: 0
+因竞争丢失关闭: 0
